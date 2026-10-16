@@ -1,0 +1,30 @@
+# Dataset setup and annotation contracts
+
+Use only data you are authorized to use; retain source attribution and applicable restrictions for derived artifacts. The combined corpus has no single replacement license. Each manifest row carries source URL, license, source version, original annotations and unsupported labels. Provider documentation was checked on 2026-10-16.
+
+| Dataset / official documentation | Required local format | License and download |
+|---|---|---|
+| [IRMAS](https://www.upf.edu/web/mtg/irmas) | Training class folders containing WAV; test WAV and same-name TXT labels | CC BY-NC-SA 3.0; provider explicitly also disallows modification and redistribution. Follow its Zenodo download link manually. Import retains original excerpts; no remix, augmentation or persisted cropped audio. Resolve terms with the provider before derived distribution. |
+| [Slakh2100](https://www.slakh.com/), [provider utilities / schema](https://github.com/ethman/slakh-utils#metadata) | `train/TrackXXXXX/metadata.yaml`, `stems/Sxx.flac`, `MIDI/Sxx.mid`, `mix.flac`; analogous validation/test folders | CC BY 4.0. Download the redux release using the provider's links manually; use official partitions. The UUID identifies original Lakh MIDI and groups stems/mixtures. |
+| [MedleyDB](https://medleydb.weebly.com/downloads.html), [format](https://medleydb.weebly.com/description.html) | Song folder with `Song_METADATA.yaml` and `Song_STEMS/*.wav` | CC BY-NC-SA 4.0. Request full audio access through provider-linked Zenodo. Download metadata too; place YAML beside each song's stem directory. Do not republish data against provider requests. |
+| [NSynth](https://magenta.tensorflow.org/datasets/nsynth) | Each `nsynth-{train,valid,test}/examples.json` with `audio/<note_str>.wav` | CC BY 4.0. JSON/WAV archives are publicly linked; TFRecord import is unsupported. |
+| [MAESTRO v3](https://magenta.tensorflow.org/datasets/maestro) | `maestro-v3.0.0.csv`, year folders containing WAV and aligned MIDI | CC BY-NC-SA 4.0. Public v3 audio archive is about 101 GB (120 GB unpacked). MIDI-only download cannot train an audio model. v3 avoids known accompaniment contamination in earlier releases. |
+
+Optional provider-hosted downloads (archives are not automatically extracted):
+
+```powershell
+python scripts/download_dataset.py --dataset nsynth-valid --accept-license
+python scripts/download_dataset.py --dataset maestro-v3 --accept-license
+```
+
+`--dataset` choices are `nsynth-train`, `nsynth-valid`, `nsynth-test`, `maestro-v3`; `--output` defaults to `data/downloads`. MAESTRO checks its official SHA256. NSynth records the received SHA256; its documentation does not provide a checksum in the linked table. Downloads stream to a temporary `.part` and refuse overwriting. These network download paths are implemented from official URLs but were not executed with multi-GB archives in this session.
+
+Central taxonomy in `configs/instruments.yaml`: piano, acoustic guitar, electric guitar, bass guitar, drums, violin, flute, trumpet, saxophone, organ/keyboard. General MIDI mappings are zero-based and conservative: acoustic bass, generic strings, brass, reed, synths, vocals and unsupported families are not reassigned to specific targets. NSynth keyboard does not establish piano, brass does not establish trumpet, string does not establish violin, reed does not establish saxophone, and bass does not establish bass guitar. NSynth guitar maps only acoustic/electronic sources; organ and nonsynthetic flute are supported. Preserve its `instrument_str` groups and supplied splits. No fake MIDI is generated from pitch metadata.
+
+IRMAS requires `group_map: path/to/groups.json` in its source options. JSON maps each audio path relative to IRMAS root to its verified original recording ID. No such mapping is included: the importer deliberately refuses to guess recording identity from sequential excerpt filenames. Its training annotations specify predominant positives, not exhaustive absences. Test annotations omit bass/percussion and other non-target categories. Only observed positives enter its loss/metrics. MedleyDB stems likewise use positive-only masks because bleed and weak annotations do not justify absent-instrument claims. MedleyDB activity CSV annotations are not imported; exported predictions remain weak clip estimates.
+
+Slakh stems and original mixes use aligned stem MIDI to derive window instrument labels; notes are clipped to each segment with local start/end, program, pitch, velocity and drum flag. Original MIDI paths remain available to recover pedal/controller events and untrimmed note boundaries. Pedal-aware acoustic tails and MedleyDB frame activity supervision are not implemented. MAESTRO composition IDs combine canonical composer/title and retain official partitions. Cross-corpus recording/composition equivalence is not automatically established; audit overlapping repertoire before claiming a cross-corpus composition-disjoint benchmark.
+
+Preparation defaults to 5-second nonoverlapping windows and a maximum of 10,000 actual segments. Short source examples retain their real duration and are padded only on model input. IRMAS excerpts are kept whole when they fit a window, to respect the provider restriction. Empty, corrupt, missing or silent audio is reported; unsupported-only examples are excluded. Output is a manifest of offsets, not redistributed audio. Hash-ranked sampling is deterministic. Official partitions take precedence over the hash-based 70/15/15 group split used where none exists, so final ratios are not guaranteed to equal 70/15/15. Byte-identical audio is deduplicated; this is not an acoustic near-duplicate detector.
+
+Inspect `data/manifests/report.json`, `segments.json`, and train/validation/test JSON and CSV files. The report states actual counts, source failures, label coverage and target shortfall. No audio is downloaded or invented to fill a shortfall. Copy config, manifests and checksums with each experiment, and keep raw paths accessible. Import is a file-manifest workflow; database ingestion and an authenticated import UI are not implemented in this empty repository.

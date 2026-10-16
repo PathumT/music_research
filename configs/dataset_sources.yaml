@@ -1,0 +1,10 @@
+seed: 42
+target_segments: 10000
+segment_seconds: 5
+output: data/manifests
+sources:
+  irmas: {root: data/raw/irmas, enabled: true, license_accepted: false, version: original}
+  slakh: {root: data/raw/slakh2100_flac_redux, enabled: true, license_accepted: false, version: redux}
+  medleydb: {root: data/raw/medleydb, enabled: true, license_accepted: false, version: '1'}
+  nsynth: {root: data/raw/nsynth, enabled: true, license_accepted: false, version: json-wav}
+  maestro: {root: data/raw/maestro-v3.0.0, enabled: true, license_accepted: false, version: '3.0.0'}

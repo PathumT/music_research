@@ -1,0 +1,85 @@
+{
+  "sources": {
+    "irmas": {
+      "status": "unavailable",
+      "root": "data/raw/irmas"
+    },
+    "slakh": {
+      "status": "unavailable",
+      "root": "data/raw/slakh2100_flac_redux"
+    },
+    "medleydb": {
+      "status": "unavailable",
+      "root": "data/raw/medleydb"
+    },
+    "nsynth": {
+      "status": "unavailable",
+      "root": "data/raw/nsynth"
+    },
+    "maestro": {
+      "status": "unavailable",
+      "root": "data/raw/maestro-v3.0.0"
+    }
+  },
+  "errors": [],
+  "unsupported_labels": {},
+  "segments": 0,
+  "target": 10000,
+  "target_shortfall": 10000,
+  "splits": {
+    "train": 0,
+    "validation": 0,
+    "test": 0
+  },
+  "labels": {
+    "piano": 0,
+    "acoustic_guitar": 0,
+    "electric_guitar": 0,
+    "bass_guitar": 0,
+    "drums": 0,
+    "violin": 0,
+    "flute": 0,
+    "trumpet": 0,
+    "saxophone": 0,
+    "organ_keyboard": 0
+  },
+  "manifest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "config": {
+    "seed": 42,
+    "target_segments": 10000,
+    "segment_seconds": 5,
+    "output": "data/manifests",
+    "sources": {
+      "irmas": {
+        "root": "data/raw/irmas",
+        "enabled": true,
+        "license_accepted": false,
+        "version": "original"
+      },
+      "slakh": {
+        "root": "data/raw/slakh2100_flac_redux",
+        "enabled": true,
+        "license_accepted": false,
+        "version": "redux"
+      },
+      "medleydb": {
+        "root": "data/raw/medleydb",
+        "enabled": true,
+        "license_accepted": false,
+        "version": "1"
+      },
+      "nsynth": {
+        "root": "data/raw/nsynth",
+        "enabled": true,
+        "license_accepted": false,
+        "version": "json-wav"
+      },
+      "maestro": {
+        "root": "data/raw/maestro-v3.0.0",
+        "enabled": true,
+        "license_accepted": false,
+        "version": "3.0.0"
+      }
+    }
+  }
+}

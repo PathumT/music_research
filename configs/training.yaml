@@ -1,0 +1,12 @@
+manifest: data/manifests/segments.json
+output: research/results
+registry: checkpoints/registry.json
+seed: 42
+device: cpu
+epochs: 20
+batch_size: 16
+learning_rate: 0.001
+patience: 5
+max_batches: null
+allow_synthetic: false
+preprocessing: {sample_rate: 16000, segment_seconds: 5, n_fft: 512, hop_length: 256, n_mels: 64}

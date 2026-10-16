@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "synthetic": true,
+  "warning": "Not instrument-recognition research evidence",
+  "segments": 30,
+  "splits": {
+    "train": 10,
+    "validation": 10,
+    "test": 10
+  },
+  "checks": [
+    "loader",
+    "split leakage rejection",
+    "masked BCE gradients",
+    "optimizer updates",
+    "baseline/attention/fusion training",
+    "checkpoint save/load",
+    "inference",
+    "held-out evaluation",
+    "synthetic registry exclusion",
+    "API unavailable-model response"
+  ],
+  "results": {
+    "baseline": {
+      "loss": 0.6775215566158295,
+      "macro_f1": 0.18181818181818182,
+      "micro_f1": 0.18181818181818182,
+      "samples": 10
+    },
+    "attention": {
+      "loss": 0.6279727518558502,
+      "macro_f1": 0.18181818181818182,
+      "micro_f1": 0.18181818181818182,
+      "samples": 10
+    },
+    "fusion": {
+      "loss": 0.6424574851989746,
+      "macro_f1": 0.2772727272727272,
+      "micro_f1": 0.21052631578947367,
+      "samples": 10
+    }
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "per_instrument": {
+    "piano": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 1.0,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "acoustic_guitar": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 0.5,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "electric_guitar": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 0.16666666666666666,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "bass_guitar": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 0.2,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "drums": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 0.25,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "violin": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 1.0,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "flute": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 0.2,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "trumpet": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 0.3333333333333333,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "saxophone": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 0.5,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    },
+    "organ_keyboard": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "average_precision": 0.25,
+      "support": 1,
+      "known": 10,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0,
+      "tn": 0
+    }
+  },
+  "macro_f1": 0.18181818181818182,
+  "micro_f1": 0.18181818181818182,
+  "annotation_policy": "Unknown class targets excluded; metrics on observed labels only",
+  "loss": 0.6775215566158295,
+  "checkpoint_sha256": "04409fd4e2cef3e6f511ac7f07e8d9fd83f7473768a8d5be4dd05e204dd25e0a",
+  "synthetic": true,
+  "samples": 10,
+  "thresholds": [
+    0.45000000000000007,
+    0.45000000000000007,
+    0.40000000000000013,
+    0.45000000000000007,
+    0.5000000000000001,
+    0.45000000000000007,
+    0.5000000000000001,
+    0.5000000000000001,
+    0.40000000000000013,
+    0.5000000000000001
+  ],
+  "errors": [
+    {
+      "segment_id": "test_0",
+      "misclassified": [
+        "acoustic_guitar",
+        "electric_guitar",
+        "bass_guitar",
+        "drums",
+        "violin",
+        "flute",
+        "trumpet",
+        "saxophone",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.49049142003059387,
+        0.47451305389404297,
+        0.42839622497558594,
+        0.45994865894317627,
+        0.5400763750076294,
+        0.4598540663719177,
+        0.536041259765625,
+        0.5386770367622375,
+        0.4438413679599762,
+        0.5336624979972839
+      ]
+    },
+    {
+      "segment_id": "test_1",
+      "misclassified": [
+        "piano",
+        "electric_guitar",
+        "bass_guitar",
+        "drums",
+        "violin",
+        "flute",
+        "trumpet",
+        "saxophone",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.4834863543510437,
+        0.4715976417064667,
+        0.4305867850780487,
+        0.46485984325408936,
+        0.5370921492576599,
+        0.4602157771587372,
+        0.5371263027191162,
+        0.537539005279541,
+        0.4467541575431824,
+        0.5334583520889282
+      ]
+    },
+    {
+      "segment_id": "test_2",
+      "misclassified": [
+        "piano",
+        "acoustic_guitar",
+        "bass_guitar",
+        "drums",
+        "violin",
+        "flute",
+        "trumpet",
+        "saxophone",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.4797305166721344,
+        0.46694430708885193,
+        0.4301460385322571,
+        0.4618473947048187,
+        0.5369425415992737,
+        0.4601396322250366,
+        0.5362694263458252,
+        0.5420635342597961,
+        0.4494519829750061,
+        0.5348933935165405
+      ]
+    },
+    {
+      "segment_id": "test_3",
+      "misclassified": [
+        "piano",
+        "acoustic_guitar",
+        "electric_guitar",
+        "drums",
+        "violin",
+        "flute",
+        "trumpet",
+        "saxophone",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.47036367654800415,
+        0.46585556864738464,
+        0.42689865827560425,
+        0.4592868685722351,
+        0.533484935760498,
+        0.45482370257377625,
+        0.5400200486183167,
+        0.5352519750595093,
+        0.4420252740383148,
+        0.5358827710151672
+      ]
+    },
+    {
+      "segment_id": "test_4",
+      "misclassified": [
+        "piano",
+        "acoustic_guitar",
+        "electric_guitar",
+        "bass_guitar",
+        "violin",
+        "flute",
+        "trumpet",
+        "saxophone",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.4703601896762848,
+        0.46347784996032715,
+        0.4318884313106537,
+        0.4573853313922882,
+        0.5377134680747986,
+        0.455961674451828,
+        0.5393763184547424,
+        0.5338270664215088,
+        0.44560638070106506,
+        0.5316630005836487
+      ]
+    },
+    {
+      "segment_id": "test_5",
+      "misclassified": [
+        "piano",
+        "acoustic_guitar",
+        "electric_guitar",
+        "bass_guitar",
+        "drums",
+        "flute",
+        "trumpet",
+        "saxophone",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.47918692231178284,
+        0.46796318888664246,
+        0.4257051348686218,
+        0.45278871059417725,
+        0.534242570400238,
+        0.46799206733703613,
+        0.5365048050880432,
+        0.5366383194923401,
+        0.43769553303718567,
+        0.5371022820472717
+      ]
+    },
+    {
+      "segment_id": "test_6",
+      "misclassified": [
+        "piano",
+        "acoustic_guitar",
+        "electric_guitar",
+        "bass_guitar",
+        "drums",
+        "violin",
+        "trumpet",
+        "saxophone",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.4825248122215271,
+        0.47019532322883606,
+        0.4303690791130066,
+        0.45450371503829956,
+        0.5369924902915955,
+        0.4601284861564636,
+        0.5376262664794922,
+        0.5375330448150635,
+        0.43756410479545593,
+        0.5401838421821594
+      ]
+    },
+    {
+      "segment_id": "test_7",
+      "misclassified": [
+        "piano",
+        "acoustic_guitar",
+        "electric_guitar",
+        "bass_guitar",
+        "drums",
+        "violin",
+        "flute",
+        "saxophone",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.4795602560043335,
+        0.4669715464115143,
+        0.4324585497379303,
+        0.45927950739860535,
+        0.5367023944854736,
+        0.4599296450614929,
+        0.5369992852210999,
+        0.5401037931442261,
+        0.44286373257637024,
+        0.5384823679924011
+      ]
+    },
+    {
+      "segment_id": "test_8",
+      "misclassified": [
+        "piano",
+        "acoustic_guitar",
+        "electric_guitar",
+        "bass_guitar",
+        "drums",
+        "violin",
+        "flute",
+        "trumpet",
+        "organ_keyboard"
+      ],
+      "probabilities": [
+        0.47830620408058167,
+        0.4622728228569031,
+        0.4331505596637726,
+        0.46196097135543823,
+        0.5380589962005615,
+        0.46089014410972595,
+        0.5379218459129333,
+        0.5467847585678101,
+        0.4478217661380768,
+        0.5384566187858582
+      ]
+    },
+    {
+      "segment_id": "test_9",
+      "misclassified": [
+        "piano",
+        "acoustic_guitar",
+        "electric_guitar",
+        "bass_guitar",
+        "drums",
+        "violin",
+        "flute",
+        "trumpet",
+        "saxophone"
+      ],
+      "probabilities": [
+        0.473089337348938,
+        0.4695022404193878,
+        0.43012890219688416,
+        0.45858171582221985,
+        0.5386362075805664,
+        0.45077842473983765,
+        0.5398209691047668,
+        0.536537766456604,
+        0.4433068633079529,
+        0.5377426147460938
+      ]
+    }
+  ]
+}

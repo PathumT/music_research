@@ -1,0 +1,85 @@
+{
+  "kind": "attention",
+  "classes": [
+    "piano",
+    "acoustic_guitar",
+    "electric_guitar",
+    "bass_guitar",
+    "drums",
+    "violin",
+    "flute",
+    "trumpet",
+    "saxophone",
+    "organ_keyboard"
+  ],
+  "preprocessing": {
+    "hop_length": 128,
+    "n_fft": 256,
+    "n_mels": 32,
+    "sample_rate": 8000,
+    "segment_seconds": 3
+  },
+  "thresholds": [
+    0.40000000000000013,
+    0.40000000000000013,
+    0.45000000000000007,
+    0.45000000000000007,
+    0.45000000000000007,
+    0.45000000000000007,
+    0.40000000000000013,
+    0.45000000000000007,
+    0.45000000000000007,
+    0.45000000000000007
+  ],
+  "config": {
+    "allow_synthetic": true,
+    "batch_size": 5,
+    "device": "cpu",
+    "epochs": 2,
+    "learning_rate": 0.003,
+    "manifest": "F:\\Music Research\\data\\smoke\\segments.json",
+    "max_batches": 2,
+    "output": "F:\\Music Research\\data\\smoke\\results",
+    "patience": 3,
+    "preprocessing": {
+      "hop_length": 128,
+      "n_fft": 256,
+      "n_mels": 32,
+      "sample_rate": 8000,
+      "segment_seconds": 3
+    },
+    "registry": "F:\\Music Research\\data\\smoke\\registry.json",
+    "seed": 42
+  },
+  "manifest_sha256": "1bfe9838bc2883459df89dafec7ddabe4766af3e07b56b13c5fb4fbd4c71937c",
+  "synthetic": true,
+  "epoch": 2,
+  "software": {
+    "python": "3.14.7",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4"
+  },
+  "hardware": {
+    "device": "cpu",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "cuda_device": null
+  },
+  "train_positive_support": {
+    "piano": 1,
+    "acoustic_guitar": 1,
+    "electric_guitar": 1,
+    "bass_guitar": 1,
+    "drums": 1,
+    "violin": 1,
+    "flute": 1,
+    "trumpet": 1,
+    "saxophone": 1,
+    "organ_keyboard": 1
+  },
+  "parameters": 18283,
+  "activity_supervision": "weak clip labels",
+  "fusion_inputs": null,
+  "training_seconds": 0.6049704551696777,
+  "optimizer_updates": 4
+}

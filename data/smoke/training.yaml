@@ -1,0 +1,17 @@
+allow_synthetic: true
+batch_size: 5
+device: cpu
+epochs: 2
+learning_rate: 0.003
+manifest: F:\Music Research\data\smoke\segments.json
+max_batches: 2
+output: F:\Music Research\data\smoke\results
+patience: 3
+preprocessing:
+  hop_length: 128
+  n_fft: 256
+  n_mels: 32
+  sample_rate: 8000
+  segment_seconds: 3
+registry: F:\Music Research\data\smoke\registry.json
+seed: 42

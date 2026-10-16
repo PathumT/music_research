@@ -1,0 +1,252 @@
+[
+  {
+    "id": "validation_0",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_0.wav",
+    "audio_sha256": "12478707cc10b4f60b0cbeb72e1b9cc31d3546baf0005a3cc5a19985f38a066f",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:0",
+    "split": "validation",
+    "labels": [
+      "piano"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_1",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_1.wav",
+    "audio_sha256": "07d7d895cb11e4cf9e9b8e5548757ceafe7b6e252f4cdd6fd40d944aefee85c9",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:1",
+    "split": "validation",
+    "labels": [
+      "acoustic_guitar"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_2",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_2.wav",
+    "audio_sha256": "e2e78f9b671fce2617c64d4a0d509fb5d3068f84e6bebd905f20b8a16fb7085e",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:2",
+    "split": "validation",
+    "labels": [
+      "electric_guitar"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_3",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_3.wav",
+    "audio_sha256": "6bcbfbdb20fc52c9df04068d4145d965c2d11f5062aff5caa21bf0ab6c5cf5fd",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:3",
+    "split": "validation",
+    "labels": [
+      "bass_guitar"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_4",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_4.wav",
+    "audio_sha256": "ca36aee418845cf4f2b50f095444e31a603b9e9e442c1404c29e9c54b214b78f",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:4",
+    "split": "validation",
+    "labels": [
+      "drums"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_5",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_5.wav",
+    "audio_sha256": "5952b42660a3817afa4004a911965f5b3ff06811382df71d1bd935039da0d15a",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:5",
+    "split": "validation",
+    "labels": [
+      "violin"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_6",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_6.wav",
+    "audio_sha256": "6a526b327032f022174da3e2e5aa75996a9b1c8c7ee58de599bc7ba67113b970",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:6",
+    "split": "validation",
+    "labels": [
+      "flute"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_7",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_7.wav",
+    "audio_sha256": "8cfd6fed8b83e3855afa8f29aff80295638d3cb9b7e88ebb65681a82f7e2a4bf",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:7",
+    "split": "validation",
+    "labels": [
+      "trumpet"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_8",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_8.wav",
+    "audio_sha256": "a59be5e7642df1f89fc196863db5423b5be8574a0134761845d0d6de0e78115e",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:8",
+    "split": "validation",
+    "labels": [
+      "saxophone"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "validation_9",
+    "audio": "F:\\Music Research\\data\\smoke\\validation_9.wav",
+    "audio_sha256": "50eee14d2984a83b241e4c0c02767f508dbef235ce0536a36a5b932a1e5564ff",
+    "start": 0,
+    "end": 3,
+    "group_id": "fixture:validation:9",
+    "split": "validation",
+    "labels": [
+      "organ_keyboard"
+    ],
+    "known_classes": [
+      "piano",
+      "acoustic_guitar",
+      "electric_guitar",
+      "bass_guitar",
+      "drums",
+      "violin",
+      "flute",
+      "trumpet",
+      "saxophone",
+      "organ_keyboard"
+    ],
+    "synthetic": true
+  }
+]

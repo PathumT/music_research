@@ -1,0 +1,13 @@
+torch
+numpy
+scipy
+soundfile
+PyYAML
+scikit-learn
+matplotlib
+pretty_midi
+fastapi
+uvicorn
+python-multipart
+pytest
+httpx
